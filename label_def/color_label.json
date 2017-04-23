@@ -1,0 +1,10 @@
+{
+	"green": {
+		"label": 0,
+		"desc": "green"
+	},
+	"blue": {
+		"label": 1,
+		"desc": "blue"
+	}
+}

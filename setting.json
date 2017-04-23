@@ -1,0 +1,84 @@
+{
+	"base_dir": "./",
+	"data_dir": "picts",
+	"label_file": "./label_out/labels.json",
+	"label_class": {
+		"color": "./label_def/color_label.json",
+		"car_type": {
+			"big": {
+				"label": 0,
+				"desc": "big"
+			},
+			"small": {
+				"label": 1,
+				"desc": "small"
+			}
+		},
+		"car_type_1": {
+			"big": {
+				"label": 0,
+				"desc": "big"
+			},
+			"small": {
+				"label": 1,
+				"desc": "small"
+			},
+			"big1": {
+				"label": 2,
+				"desc": "big"
+			},
+			"big2": {
+				"label": 3,
+				"desc": "big"
+			},
+			"big3": {
+				"label": 4,
+				"desc": "big"
+			},
+			"big4": {
+				"label": 5,
+				"desc": "big"
+			},
+			"big5": {
+				"label": 6,
+				"desc": "big"
+			},
+			"big6": {
+				"label": 7,
+				"desc": "big"
+			},
+			"big7": {
+				"label": 8,
+				"desc": "big"
+			},
+			"big8": {
+				"label": 9,
+				"desc": "big"
+			},
+			"big9": {
+				"label": 10,
+				"desc": "big"
+			}
+		},
+		"car_type_2": {
+			"big": {
+				"label": 0,
+				"desc": "big"
+			},
+			"small": {
+				"label": 1,
+				"desc": "small"
+			}
+		},
+		"car_type_3": {
+			"big": {
+				"label": 0,
+				"desc": "big"
+			},
+			"small": {
+				"label": 1,
+				"desc": "small"
+			}
+		}
+	}
+}
