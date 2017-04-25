@@ -175,8 +175,10 @@ class Application(Frame):
             for l in labels:
                 label = labels[l]
                 index = label["label"]
-                desc = label["desc"]
-
+                desc = l
+                if label.has_key("desc"):
+                    desc = label["desc"]
+                
                 self.add_control("%s_label" % (key),
                     Label(docker, text="[%s]" % (key)),
                     { "row":row_count, "column":0, "sticky":E })
