@@ -1,9 +1,9 @@
 {
 	"base_dir": "./",
 	"data_dir": "picts",
-	"label_file": "./label_out/labels.json",
+	"label_file": "label_out/labels.json",
 	"label_class": {
-		"color": "./label_def/color_label.json",
+		"color": "label_def/color_label.json",
 		"car_type": {
 			"big": {
 				"label": 0,
