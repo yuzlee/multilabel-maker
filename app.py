@@ -41,7 +41,9 @@ def label_format(src, dest, src_type, dest_type):
 
 
 
-def read_json(path="setting.json"):
+def read_json(path, relative_path=True):
+    if relative_path:
+        path = os.path.join(base_dir, path)
     assert os.path.exists(path), "Can not find file."
     json_file = open(path, "r")
     json_string = json_file.read()
@@ -67,8 +69,6 @@ class Application(Frame):
     def __init__(self, image_dir, label_file, master=None):
         Frame.__init__(self, master)
 
-        self.controls = {}
-
         self.image_dir = image_dir
         self.label_file = label_file
         self.image_list = []
@@ -93,6 +93,7 @@ class Application(Frame):
                 if os.path.splitext(file)[1] in [ ".jpg", ".png", ".bmp" ]:
                     self.image_list.append(os.path.join(parent, file))
         assert len(self.image_list) > 2, "Too fewer images."
+
 
     def register_label(self, _dict):
     	key = self.image_list[self.image_list_index]
@@ -162,6 +163,7 @@ class Application(Frame):
             labels = label_class[key]
 
             print "Load %s labels from %s" % (key, type(labels))
+            # the labels should be a json object or a relative path to the definition json file.
             if type(labels) is unicode:
                 labels = read_json(labels)
             elif type(labels) is dict:
@@ -231,7 +233,7 @@ def main():
     global base_dir
     global data_dir
     global label_file
-    setting = read_json()
+    setting = read_json("setting.json", False)
     base_dir = setting["base_dir"]
     data_dir = os.path.join(base_dir, setting["data_dir"])
     label_file = os.path.join(base_dir, setting["label_file"])
